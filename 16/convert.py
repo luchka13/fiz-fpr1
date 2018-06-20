@@ -7,7 +7,7 @@ import os
 def convert(path, file):
     with open(path + '/' + file, 'r') as src:
         with open(path + '/converted_' + file, 'w') as dest:
-            dest.write('\'time\',\'angle\',\'omega\'\n')
+            dest.write('time,angle,omega\n')
             for line in src:
                 line = line.split(',')
                 if len(line) > 9:
